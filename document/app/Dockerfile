@@ -7,10 +7,10 @@ RUN java -jar /usr/share/plantuml/plantuml.jar -h
 
 WORKDIR /app
 
-COPY ./book.toml .
-
 RUN cargo install mdbook
-# RUN cargo install mdbook-graphviz
+
 RUN cargo install mdbook-plantuml --no-default-features
+
+COPY ./book.toml .
 
 CMD [ "/bin/sh", "-c", "mdbook serve --hostname '0.0.0.0'" ]
