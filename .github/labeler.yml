@@ -1,4 +1,7 @@
 document:
   - README.md
+  - document/**/*
+web:
+  - web/**/*
 ci:
   - .github/**/*
