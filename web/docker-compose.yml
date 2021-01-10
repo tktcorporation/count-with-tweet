@@ -1,0 +1,10 @@
+version: "3.7"
+services:
+  app:
+    build: ./app
+    command: "/bin/sh -c 'npm i'"
+    working_dir: /app
+    ports:
+      - 8000:8000
+    volumes:
+      - .:/app
